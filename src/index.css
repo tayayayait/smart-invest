@@ -1,0 +1,287 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary - Professional Blue */
+    --primary: 217 91% 50%;
+    --primary-foreground: 0 0% 100%;
+    --primary-weak: 217 91% 95%;
+    
+    /* Background & Surfaces */
+    --background: 220 20% 98%;
+    --foreground: 222 47% 11%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    
+    /* Secondary */
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 222 47% 11%;
+    
+    /* Muted */
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+    
+    /* Accent */
+    --accent: 217 91% 97%;
+    --accent-foreground: 217 91% 40%;
+    
+    /* Semantic Colors */
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+    --success-weak: 142 71% 95%;
+    
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --warning-weak: 38 92% 95%;
+    
+    --error: 0 84% 60%;
+    --error-foreground: 0 0% 100%;
+    --error-weak: 0 84% 96%;
+    
+    --info: 217 91% 60%;
+    --info-foreground: 0 0% 100%;
+    --info-weak: 217 91% 96%;
+    
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Border & Input */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 217 91% 50%;
+    
+    /* Radius */
+    --radius: 0.5rem;
+    
+    /* Neutral Scale */
+    --neutral-0: 0 0% 100%;
+    --neutral-10: 220 20% 98%;
+    --neutral-20: 220 14% 96%;
+    --neutral-30: 220 13% 91%;
+    --neutral-40: 220 9% 84%;
+    --neutral-50: 220 9% 70%;
+    --neutral-60: 220 9% 56%;
+    --neutral-70: 220 9% 46%;
+    --neutral-80: 222 47% 25%;
+    --neutral-90: 222 47% 15%;
+    --neutral-100: 222 47% 11%;
+    
+    /* CMI Confidence Gradient Stops */
+    --cmi-0: 220 9% 70%;
+    --cmi-25: 217 50% 60%;
+    --cmi-50: 217 70% 55%;
+    --cmi-75: 200 80% 50%;
+    --cmi-100: 170 75% 45%;
+    
+    /* Elevation Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.08), 0 2px 4px -2px hsl(0 0% 0% / 0.05);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.08), 0 4px 6px -4px hsl(0 0% 0% / 0.05);
+    --shadow-card: 0 1px 3px 0 hsl(0 0% 0% / 0.08), 0 1px 2px -1px hsl(0 0% 0% / 0.05);
+    
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 217 91% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 14% 96%;
+    --sidebar-accent-foreground: 222 47% 11%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217 91% 50%;
+  }
+
+  .dark {
+    --primary: 217 91% 60%;
+    --primary-foreground: 222 47% 11%;
+    --primary-weak: 217 50% 20%;
+    
+    --background: 222 47% 7%;
+    --foreground: 220 14% 96%;
+    
+    --card: 222 47% 10%;
+    --card-foreground: 220 14% 96%;
+    
+    --popover: 222 47% 10%;
+    --popover-foreground: 220 14% 96%;
+    
+    --secondary: 217 32% 17%;
+    --secondary-foreground: 220 14% 96%;
+    
+    --muted: 217 32% 17%;
+    --muted-foreground: 220 9% 65%;
+    
+    --accent: 217 32% 20%;
+    --accent-foreground: 217 91% 70%;
+    
+    --success: 142 71% 50%;
+    --success-foreground: 0 0% 100%;
+    --success-weak: 142 50% 15%;
+    
+    --warning: 38 92% 55%;
+    --warning-foreground: 0 0% 0%;
+    --warning-weak: 38 50% 15%;
+    
+    --error: 0 84% 60%;
+    --error-foreground: 0 0% 100%;
+    --error-weak: 0 50% 15%;
+    
+    --info: 217 91% 65%;
+    --info-foreground: 0 0% 100%;
+    --info-weak: 217 50% 15%;
+    
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 217 32% 17%;
+    --input: 217 32% 17%;
+    --ring: 217 91% 60%;
+    
+    --sidebar-background: 222 47% 10%;
+    --sidebar-foreground: 220 14% 96%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 222 47% 11%;
+    --sidebar-accent: 217 32% 17%;
+    --sidebar-accent-foreground: 220 14% 96%;
+    --sidebar-border: 217 32% 17%;
+    --sidebar-ring: 217 91% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+  }
+  
+  /* Tabular numbers for financial data */
+  .font-tabular {
+    font-variant-numeric: tabular-nums lining-nums;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+  }
+}
+
+@layer components {
+  /* CMI Confidence Badge Gradient */
+  .cmi-gradient {
+    background: linear-gradient(
+      90deg,
+      hsl(var(--cmi-0)) 0%,
+      hsl(var(--cmi-25)) 25%,
+      hsl(var(--cmi-50)) 50%,
+      hsl(var(--cmi-75)) 75%,
+      hsl(var(--cmi-100)) 100%
+    );
+  }
+  
+  /* Card with elevation */
+  .card-elevated {
+    @apply bg-card rounded-lg;
+    box-shadow: var(--shadow-card);
+  }
+  
+  .card-elevated-hover {
+    @apply card-elevated transition-shadow duration-200;
+  }
+  
+  .card-elevated-hover:hover {
+    box-shadow: var(--shadow-md);
+  }
+  
+  /* Gain/Loss text colors */
+  .text-gain {
+    @apply text-success font-medium;
+  }
+  
+  .text-loss {
+    @apply text-error font-medium;
+  }
+  
+  /* Safe area padding for mobile */
+  .safe-area-top {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+  
+  .safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+}
+
+@layer utilities {
+  /* Animation utilities */
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slide-in-bottom {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes pulse-soft {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+  }
+  
+  @keyframes number-rollup {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .animate-fade-in-up {
+    animation: fade-in-up 0.3s ease-out forwards;
+  }
+  
+  .animate-slide-in-bottom {
+    animation: slide-in-bottom 0.3s ease-out forwards;
+  }
+  
+  .animate-pulse-soft {
+    animation: pulse-soft 2s ease-in-out infinite;
+  }
+  
+  .animate-number-rollup {
+    animation: number-rollup 0.4s ease-out forwards;
+  }
+  
+  /* Stagger animations */
+  .stagger-1 { animation-delay: 50ms; }
+  .stagger-2 { animation-delay: 100ms; }
+  .stagger-3 { animation-delay: 150ms; }
+  .stagger-4 { animation-delay: 200ms; }
+  .stagger-5 { animation-delay: 250ms; }
+}

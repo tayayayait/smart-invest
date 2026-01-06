@@ -1,0 +1,45 @@
+# Design Tokens Guide
+
+This project uses a single source of truth for UI tokens in `tokens.json`.
+The runtime styles are provided via CSS variables in `src/index.css` and
+consumed by Tailwind config in `tailwind.config.ts`.
+
+## Files
+
+- `tokens.json` - canonical token values
+- `src/index.css` - CSS variable bindings
+- `tailwind.config.ts` - Tailwind mappings
+
+## Usage
+
+### CSS
+
+```css
+/* Example */
+.cta {
+  background: var(--primary);
+  color: var(--primary-foreground);
+  box-shadow: var(--shadow-card);
+}
+```
+
+### Tailwind
+
+```tsx
+<button className="bg-primary text-primary-foreground shadow-card">
+  Primary Action
+</button>
+```
+
+## Token Categories
+
+- Colors: brand, semantic, neutrals, cmi gradient
+- Typography: scale + numeric rules
+- Grid: spacing scale + container
+- Motion: durations + easing
+- Shadows: elevation presets
+
+## Notes
+
+- All values are light theme tokens.
+- Keep `tokens.json` and `src/index.css` in sync.
