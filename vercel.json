@@ -1,0 +1,20 @@
+{
+    "rewrites": [
+        {
+            "source": "/api/naver-news",
+            "destination": "/api/naver-news"
+        },
+        {
+            "source": "/api/exchange",
+            "destination": "/api/exchange"
+        },
+        {
+            "source": "/api/yahoo-chart/:path*",
+            "destination": "/api/yahoo-chart"
+        },
+        {
+            "source": "/api/yahoo-quote/:path*",
+            "destination": "/api/yahoo-quote"
+        }
+    ]
+}
